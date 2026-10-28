@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Katanga Auto – Vente de voitures à Lubumbashi</title>
+<style>
+:root{
+  --bg:#f5f7fa;--surface:#ffffff;--text:#14202e;--muted:#5d6b7a;
+  --accent:#0b5fd9;--accent-text:#ffffff;--line:#dde4ec;--hero:#e4edf9;
+  box-sizing:border-box;color-scheme:light;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f161d;--surface:#18222c;--text:#eaf0f6;--muted:#a3b2c1;
+    --accent:#4d92f5;--accent-text:#0f161d;--line:#26333f;--hero:#16212c;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f161d;--surface:#18222c;--text:#eaf0f6;--muted:#a3b2c1;
+  --accent:#4d92f5;--accent-text:#0f161d;--line:#26333f;--hero:#16212c;color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55}
+h1,h2,h3{margin:0;line-height:1.2}
+a{color:inherit}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+.logo{font-weight:800;font-size:1.1rem;text-decoration:none;letter-spacing:-.01em}
+.logo span{color:var(--accent)}
+nav{display:flex;gap:16px;font-size:.92rem}
+nav a{text-decoration:none;color:var(--muted)}
+.hero{background:var(--hero);padding:48px 0 40px;text-align:center}
+.hero .tag{display:inline-block;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;font-weight:600}
+.hero h1{font-size:2.2rem;margin-bottom:12px}
+.hero p{color:var(--muted);margin:0 auto 22px;max-width:480px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-text);padding:13px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:0;font-size:1rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--text);border:1.5px solid var(--line);margin-left:6px}
+.stats{display:flex;justify-content:center;gap:28px;margin-top:28px;flex-wrap:wrap}
+.stats b{display:block;font-size:1.4rem;color:var(--accent)}
+.stats span{font-size:.82rem;color:var(--muted)}
+section{padding:44px 0}
+section h2{font-size:1.6rem;margin-bottom:6px}
+.sub{color:var(--muted);margin:0 0 20px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.chip{background:var(--surface);color:var(--text);border:1px solid var(--line);padding:8px 16px;border-radius:999px;font-size:.9rem;cursor:pointer}
+.chip.on{background:var(--accent);color:var(--accent-text);border-color:var(--accent)}
+.cars{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.car{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.car .pic{height:130px;background:var(--hero);display:flex;align-items:center;justify-content:center;font-size:3.6rem}
+.car .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.car h3{font-size:1.05rem}
+.specs{display:flex;flex-wrap:wrap;gap:6px}
+.specs span{font-size:.78rem;background:var(--bg);border:1px solid var(--line);padding:3px 9px;border-radius:999px;color:var(--muted)}
+.price{font-size:1.3rem;font-weight:800;color:var(--accent)}
+.car .btn{text-align:center;padding:11px;font-size:.92rem;margin-top:auto}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.why div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}
+.why b{display:block;margin-bottom:2px}
+.why span{color:var(--muted);font-size:.9rem}
+.contact{text-align:center;background:var(--hero)}
+.contact p{margin:6px 0}
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:22px 20px 96px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#25a244;color:#fff;border-radius:999px;padding:13px 20px;font-weight:600;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:6}
+@media (max-width:480px){nav{display:none}.hero h1{font-size:1.8rem}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#top">Katanga<span>Auto</span></a>
+  <nav><a href="#stock">Véhicules</a><a href="#avantages">Avantages</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+  <span class="tag">Vente de véhicules · Lubumbashi</span>
+  <h1>Trouvez la voiture qu’il vous faut</h1>
+  <p>Véhicules vérifiés, prix clairs, papiers en règle. Écrivez-nous sur WhatsApp pour voir une voiture dès aujourd’hui.</p>
+  <a class="btn" href="#stock">Voir les véhicules</a>
+  <a class="btn ghost" data-wa="Bonjour, je cherche une voiture. Pouvez-vous m’aider ?">Nous écrire</a>
+  <div class="stats">
+    <div><b>+150</b><span>véhicules vendus</span></div>
+    <div><b>100 %</b><span>contrôlés</span></div>
+    <div><b>7j/7</b><span>sur WhatsApp</span></div>
+  </div>
+</div></div>
+
+<section id="stock"><div class="wrap">
+  <h2>Nos véhicules disponibles</h2>
+  <p class="sub">Choisissez une catégorie, puis contactez-nous pour le véhicule qui vous plaît.</p>
+  <div class="filters">
+    <button class="chip on" data-f="all">Tous</button>
+    <button class="chip" data-f="berline">Berlines</button>
+    <button class="chip" data-f="suv">SUV</button>
+    <button class="chip" data-f="pickup">Pick-up</button>
+  </div>
+  <div class="cars">
+    <div class="car" data-t="berline"><div class="pic">🚗</div><div class="body"><h3>Toyota Corolla 2014</h3><div class="specs"><span>Essence</span><span>Automatique</span><span>95 000 km</span></div><div class="price">7 800 $</div><a class="btn" data-wa="Bonjour, je suis intéressé par la Toyota Corolla 2014 à 7 800 $.">Je suis intéressé</a></div></div>
+    <div class="car" data-t="berline"><div class="pic">🚘</div><div class="body"><h3>Hyundai Elantra 2016</h3><div class="specs"><span>Essence</span><span>Automatique</span><span>78 000 km</span></div><div class="price">8 900 $</div><a class="btn" data-wa="Bonjour, je suis intéressé par la Hyundai Elantra 2016 à 8 900 $.">Je suis intéressé</a></div></div>
+    <div class="car" data-t="suv"><div class="pic">🚙</div><div class="body"><h3>Toyota RAV4 2015</h3><div class="specs"><span>Essence</span><span>4x4</span><span>88 000 km</span></div><div class="price">12 500 $</div><a class="btn" data-wa="Bonjour, je suis intéressé par la Toyota RAV4 2015 à 12 500 $.">Je suis intéressé</a></div></div>
+    <div class="car" data-t="suv"><div class="pic">🚙</div><div class="body"><h3>Land Cruiser Prado 2012</h3><div class="specs"><span>Diesel</span><span>4x4</span><span>120 000 km</span></div><div class="price">22 000 $</div><a class="btn" data-wa="Bonjour, je suis intéressé par le Land Cruiser Prado 2012 à 22 000 $.">Je suis intéressé</a></div></div>
+    <div class="car" data-t="pickup"><div class="pic">🛻</div><div class="body"><h3>Toyota Hilux 2018</h3><div class="specs"><span>Diesel</span><span>4x4</span><span>65 000 km</span></div><div class="price">24 000 $</div><a class="btn" data-wa="Bonjour, je suis intéressé par la Toyota Hilux 2018 à 24 000 $.">Je suis intéressé</a></div></div>
+    <div class="car" data-t="pickup"><div class="pic">🛻</div><div class="body"><h3>Mitsubishi L200 2016</h3><div class="specs"><span>Diesel</span><span>4x4</span><span>90 000 km</span></div><div class="price">17 500 $</div><a class="btn" data-wa="Bonjour, je suis intéressé par le Mitsubishi L200 2016 à 17 500 $.">Je suis intéressé</a></div></div>
+  </div>
+</div></section>
+
+<section id="avantages" style="padding-top:0"><div class="wrap">
+  <h2>Pourquoi acheter chez nous</h2>
+  <p class="sub">Un achat serein, de la visite à la remise des clés.</p>
+  <div class="why">
+    <div><b>Véhicules contrôlés</b><span>Moteur, freins et carrosserie vérifiés avant la vente.</span></div>
+    <div><b>Papiers en règle</b><span>Documents complets et accompagnement pour l’immatriculation.</span></div>
+    <div><b>Prix clairs</b><span>Aucun frais caché, le prix affiché est le prix final.</span></div>
+    <div><b>Essai gratuit</b><span>Venez voir et essayer le véhicule avant de décider.</span></div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <h2>Prêt à choisir votre voiture ?</h2>
+  <p>Dites-nous votre budget et le type de véhicule recherché.</p>
+  <p style="margin-top:16px">
+    <a class="btn" data-wa="Bonjour, mon budget est de ... $ et je cherche ...">Écrire sur WhatsApp</a>
+    <a class="btn ghost" href="tel:+243000000000">Appeler</a>
+  </p>
+  <p style="margin-top:14px"><a href="https://www.google.com/maps/search/?api=1&query=vente+voitures+Lubumbashi" target="_blank" rel="noopener">Voir notre showroom sur Google Maps</a></p>
+  <p style="color:var(--muted);font-size:.9rem">Lun – Sam : 8h00 – 18h00 · Avenue à adapter, Lubumbashi</p>
+</div></section>
+</main>
+
+<footer>© 2026 Katanga Auto · Site de démonstration</footer>
+<a class="fab" data-wa="Bonjour, j’ai une question sur un véhicule.">💬 WhatsApp</a>
+
+<script>
+var NUM="243000000000"; // remplacez par le vrai numéro WhatsApp de l’agence
+document.querySelectorAll("[data-wa]").forEach(function(el){
+  el.href="https://wa.me/"+NUM+"?text="+encodeURIComponent(el.getAttribute("data-wa"));
+  el.target="_blank"; el.rel="noopener";
+});
+var chips=document.querySelectorAll(".chip"),cars=document.querySelectorAll(".car");
+chips.forEach(function(c){
+  c.addEventListener("click",function(){
+    chips.forEach(function(x){x.classList.remove("on")});
+    c.classList.add("on");
+    var f=c.getAttribute("data-f");
+    cars.forEach(function(car){
+      car.style.display=(f==="all"||car.getAttribute("data-t")===f)?"":"none";
+    });
+  });
+});
+</script>
+</body>
+</html>
